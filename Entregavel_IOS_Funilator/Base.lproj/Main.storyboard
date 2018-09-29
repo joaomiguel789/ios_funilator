@@ -1,24 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ve7-Ck-gDp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="ScD-n0-BNN">
+            <objects>
+                <viewController id="gEV-Qr-R21" customClass="LoginViewController" customModule="Entregavel_IOS_Funilator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FhU-jH-fIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="     EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qmg-XX-uc3">
+                                <rect key="frame" x="75" y="263" width="241" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    SENHA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0g-uX-b2x">
+                                <rect key="frame" x="75" y="334" width="241" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" tag="-1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-B5-2zH">
+                                <rect key="frame" x="75" y="398" width="241" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96242465101522845" green="0.78467880966120951" blue="0.050237689830452403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                <state key="normal" title="ENTRAR">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogin:" destination="gEV-Qr-R21" eventType="touchUpInside" id="6oy-xp-mJ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="-1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCp-Zr-OwX">
+                                <rect key="frame" x="128" y="554" width="119" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="NÃO TENHO CADASTRO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VBb-UU-TAX" kind="show" id="atj-DM-qSI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="-1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oq0-Ek-6XC">
+                                <rect key="frame" x="141" y="586" width="92" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="ESQUECI A SENHA">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.png" translatesAutoresizingMaskIntoConstraints="NO" id="kLK-De-5sh">
+                                <rect key="frame" x="102" y="62" width="186" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df9-z9-egP">
+                                <rect key="frame" x="110" y="470" width="170" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.91259729862213135" green="0.085443969376524737" blue="0.0072075028453165105" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="rK6-Rr-8cJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7sK-TH-0j0"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="lblError" destination="df9-z9-egP" id="3Il-oY-eMj"/>
+                        <outlet property="txtEmail" destination="qmg-XX-uc3" id="rCg-fO-hO4"/>
+                        <outlet property="txtPassword" destination="c0g-uX-b2x" id="YVl-jf-L6F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BnI-qT-Uey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360.8" y="761.46926536731644"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Entregavel_IOS_Funilator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.png" translatesAutoresizingMaskIntoConstraints="NO" id="vBY-QN-LkU">
+                                <rect key="frame" x="87" y="247" width="201" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hng-AU-IGE"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="vBY-QN-LkU" id="1bN-LU-PgN"/>
+                        <segue destination="gEV-Qr-R21" kind="showDetail" identifier="loginView" id="vEj-ke-s9y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1322" y="26"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="c51-R7-jjl">
+            <objects>
+                <viewController id="VBb-UU-TAX" customClass="RegisterViewController" customModule="Entregavel_IOS_Funilator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nct-cL-kHx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="     EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxM-d9-G6p">
+                                <rect key="frame" x="74" y="346" width="241" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    SENHA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hE7-9P-x1A">
+                                <rect key="frame" x="74" y="409" width="241" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaf-2O-kpO">
+                                <rect key="frame" x="74" y="476" width="241" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96242465099999996" green="0.78467880970000004" blue="0.050237689830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                <state key="normal" title="CADASTRAR">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRegister:" destination="VBb-UU-TAX" eventType="touchUpInside" id="cdH-Tk-aGf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-A6-Swv">
+                                <rect key="frame" x="101" y="79" width="186" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNr-YU-HkI">
+                                <rect key="frame" x="137" y="567" width="109" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="JÁ TENHO CADASTRO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="     NOME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XqS-Ev-cli">
+                                <rect key="frame" x="74" y="284" width="241" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fLF-iE-4uh"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="cxM-d9-G6p" id="bJL-Cp-6Rz"/>
+                        <outlet property="nome" destination="XqS-Ev-cli" id="NLD-Jb-3oj"/>
+                        <outlet property="senha" destination="hE7-9P-x1A" id="DGn-vo-GHv"/>
+                        <outlet property="txtEmail" destination="cxM-d9-G6p" id="iII-ZG-kVG"/>
+                        <outlet property="txtName" destination="XqS-Ev-cli" id="o7f-7Y-nha"/>
+                        <outlet property="txtPassword" destination="hE7-9P-x1A" id="bzD-76-SAJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xe-u6-PtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204" y="26"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PQe-Q4-wdb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ve7-Ck-gDp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S5J-Fp-9Lf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dK4-In-vls"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3kr-2P-E6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.80000000000001" y="46.326836581709152"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image.png" width="216" height="190"/>
+    </resources>
 </document>
